@@ -1,13 +1,21 @@
-
-
-
 setwd("C:/melfaiz/DataAnalysis")
+library(dplyr)
+library(ggplot2)
+data <- read.csv("january_2018_all.csv",header = TRUE)
 
-data <- read.csv("data.csv",header = TRUE)
-data$X <- NULL
+AIRPORT_ID <- 10721 # "Boston, MA: Logan International"
+data_filtered <- subset(data,  OriginAirportID == AIRPORT_ID & Cancelled == 0 &  Diverted == 0 & DepDel15)
 
-data <- na.omit(data)
+data_filtered <- select(data_filtered,DepDelayMinutes,WeatherDelay,CarrierDelay,NASDelay,SecurityDelay,LateAircraftDelay )
+
+data_filtered = na.omit(data_filtered)
+
+MeanDepDelayMinutes = mean( data_filtered$DepDelayMinutes)
+MeanWeatherDelay = mean( data_filtered$WeatherDelay)
+MeanCarrierDelay = mean( data_filtered$CarrierDelay)
+MeanNASDelay = mean( data_filtered$NASDelay)
+MeanSecurityDelay = mean( data_filtered$SecurityDelay)
+MeanLateAircraftDelay = mean( data_filtered$LateAircraftDelay)
 
 
-
-plot(data$DEP_DELAY_NEW,data$ARR_DELAY_NEW)
+summary <- data_filtered %>% summarise_each(funs(mean))

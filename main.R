@@ -78,6 +78,8 @@ df_performance_aircraft_carrier <-merge(x=df_performance_aircraft,y=df_carrier,b
 
 
 df_performance_aircraft_carrier$TAIL_NUM <- NULL
+df_performance_aircraft_carrier <- subset(df_performance_aircraft_carrier, IS_OPERATING == 'Y')
+
 
 write.csv(df_performance_aircraft_carrier,"fligth_delay_analysis_2018.csv", row.names = FALSE)
 
