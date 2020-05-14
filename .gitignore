@@ -2,6 +2,4 @@
 .Rhistory
 .RData
 .Ruserdata
-fligth_delay_analysis_2018.csv
-*.csv
-fligth_delay_analysis_2018.csv
+data/
