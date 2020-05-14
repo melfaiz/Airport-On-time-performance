@@ -1,4 +1,4 @@
-setwd("C:/melfaiz/DataAnalysis")
+setwd("C://Users//ANDREA//Documents//DataAnalysis")
 library(readr)
 
 
@@ -80,4 +80,6 @@ df_performance_aircraft_carrier <-merge(x=df_performance_aircraft,y=df_carrier,b
 df_performance_aircraft_carrier$TAIL_NUM <- NULL
 
 write.csv(df_performance_aircraft_carrier,"fligth_delay_analysis_2018.csv", row.names = FALSE)
+
+
 
