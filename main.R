@@ -1,4 +1,4 @@
-setwd("C:/melfaiz/DataAnalysis")
+setwd("C://Users//ANDREA//Documents//DataAnalysis")
 library(readr)
 
 
@@ -82,4 +82,6 @@ df_performance_aircraft_carrier <- subset(df_performance_aircraft_carrier, IS_OP
 
 
 write.csv(df_performance_aircraft_carrier,"fligth_delay_analysis_2018.csv", row.names = FALSE)
+
+
 
