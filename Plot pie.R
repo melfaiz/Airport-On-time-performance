@@ -28,3 +28,5 @@ ggplot(days, aes(x=DayOfWeek, y=DepDelayMinutes, group = DayOfWeek)) + geom_boxp
 january_filtered <- read.csv("january_filtered.csv",header = TRUE)
 attach(january_filtered)
 delays <- select(january_filtered, DepDel15, group = DayofMonth)
+count <- count(delays, vars = DayofMonth, wt_var = DepDel15)
+ggplot(count, aes(x = vars, y = n)) + geom_point(color="#1CACDB") + geom_line(color="#1CACDB") + ggtitle("January Delayed Flights") + xlab("Day of the month") + ylab("Number of flights")
