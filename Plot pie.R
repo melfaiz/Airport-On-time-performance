@@ -3,7 +3,7 @@ library(GGally)
 library(dplyr)
 library(RColorBrewer)
 
-setwd("C://Users//ANDREA//Documents//DataAnalysis")
+setwd("C://melfaiz//DataAnalysis")
 
 data <- read.csv("delays_summary.csv",header = TRUE)
 vector       <- c(1:5)
