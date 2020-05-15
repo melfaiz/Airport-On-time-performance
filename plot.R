@@ -24,7 +24,7 @@ boxplot(CARRIER_DELAY,WEATHER_DELAY,NAS_DELAY, SECURITY_DELAY, LATE_AIRCRAFT_DEL
         main = "January: Cause of Delay",at = c(1,2,3,4,5),
         names = c("Carrier", "Weather", "Nas", "Security", "Late Aircraft"),
         col = c("#1CACDB","aquamarine2", "indianred1", "slategray1", "tan2"), horizontal = FALSE,
-        notch = FALSE, ylim = c(0, 100));grid()
+        notch = FALSE, ylim = c(0, 20));grid()
 
 # plot(delays_january,  pch=20 , cex=1.5 , col="#69b3a2") #No 
 
