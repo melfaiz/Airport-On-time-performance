@@ -1,4 +1,3 @@
-setwd("C://Users//ANDREA//Documents//DataAnalysis")
 library(readr)
 
 
